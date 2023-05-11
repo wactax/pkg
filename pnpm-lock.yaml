@@ -10,6 +10,9 @@ dependencies:
   '@w5/redis':
     specifier: ^0.0.2
     version: 0.0.2
+  '@w5/redis_lua':
+    specifier: ^0.0.8
+    version: 0.0.8
   '@w5/uridir':
     specifier: ^0.0.1
     version: 0.0.1
@@ -131,6 +134,10 @@ packages:
       yargs: 17.7.1
     dev: true
 
+  /@w5/dot@0.0.2:
+    resolution: {integrity: sha512-F6Ihmj2XeJ7pvYDGlWj5lK+BTbqB8HXlLz7IkF/EAUe5vtQmD9HGCGy7MP8FFwER7h8aXilpd0kN9/2zGlh0JQ==}
+    dev: false
+
   /@w5/htm2md@0.0.1:
     resolution: {integrity: sha512-yqPrKLWHXo5I8Mz0YUObc/N4EX5UnaWQ5BKIaWzOlrW9ZgR257OMdKu19jP5dppmbQ30TdZa2M79VYfwDgPk+Q==}
     dependencies:
@@ -215,6 +222,14 @@ packages:
       - supports-color
     dev: false
 
+  /@w5/redis_lua@0.0.8:
+    resolution: {integrity: sha512-5LjjcF54ykb0oiAbQga9UDBwfnC5PLi5g1MG5rlVrMPQttwdp8APR+JCKIrOQP7HGbeJG59fm6GzPZqTmTaO1Q==}
+    dependencies:
+      '@w5/dot': 0.0.2
+      '@w5/u8': 0.0.1
+      '@w5/utf8': 0.0.3
+    dev: false
+
   /@w5/req@0.0.1:
     resolution: {integrity: sha512-wUkQMMd2V81ntdctVjG1cF7O8fmjHQk89Fv/ivCnfMaYZL9rgLz2tSi/s/PjoqY+zl0ziL2rpncKTDElQlGRQg==}
     dependencies:
@@ -288,6 +303,10 @@ packages:
 
   /@w5/utf8@0.0.1:
     resolution: {integrity: sha512-kJCKQ1zIx1M8NUqDRyLqD6W99ssShYv1twAyWNeZfcJ2/zxVpnRLX3GAtyU6rkmNUnj42aT9paAT4nKHY6hsdw==}
+    dev: false
+
+  /@w5/utf8@0.0.3:
+    resolution: {integrity: sha512-FYkLRJ++nxAVLAzsD953X/Yc7ln7QQeUD2UsbbmtEUDYQYK2kvA7vqqKgwjuMQFUqwJdYdcHx7qtP7IgMUdHsw==}
     dev: false
 
   /@w5/walk@0.0.1:
