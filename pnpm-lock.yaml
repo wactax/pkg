@@ -8,9 +8,6 @@ dependencies:
     specifier: ^0.0.1
     version: 0.0.1
   '@w5/redis':
-    specifier: ^0.0.2
-    version: 0.0.2
-  '@w5/redis_lua':
     specifier: ^0.0.8
     version: 0.0.8
   '@w5/uridir':
@@ -38,10 +35,6 @@ devDependencies:
     version: 0.0.3
 
 packages:
-
-  /@ioredis/commands@1.2.0:
-    resolution: {integrity: sha512-Sx1pU8EM64o2BrqNpEO1CNLtKQwyhuXuqyfH7oGKCk+1a33d2r5saW8zNwm3j6BTExtjrv2BxTgzzkMwts6vGg==}
-    dev: false
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -134,10 +127,6 @@ packages:
       yargs: 17.7.1
     dev: true
 
-  /@w5/dot@0.0.2:
-    resolution: {integrity: sha512-F6Ihmj2XeJ7pvYDGlWj5lK+BTbqB8HXlLz7IkF/EAUe5vtQmD9HGCGy7MP8FFwER7h8aXilpd0kN9/2zGlh0JQ==}
-    dev: false
-
   /@w5/htm2md@0.0.1:
     resolution: {integrity: sha512-yqPrKLWHXo5I8Mz0YUObc/N4EX5UnaWQ5BKIaWzOlrW9ZgR257OMdKu19jP5dppmbQ30TdZa2M79VYfwDgPk+Q==}
     dependencies:
@@ -210,24 +199,19 @@ packages:
       cmark-gfm: 0.9.0
     dev: false
 
+  /@w5/onexit@0.0.4:
+    resolution: {integrity: sha512-uXEvVXgEStwO7JtJOJE4rUAcLn7Uf3gUCAcCvls0koPQKXALq40ptJTcNeEmUlya4wNj2OUmbA1zVxMtdWj5yA==}
+    dev: false
+
   /@w5/read@0.0.1:
     resolution: {integrity: sha512-v/D6N/2OCOVHzaYHzoD/SmKn7yuvSZ/Kj7/HrPoWZOoPkXciZtzfsDXh+ShVvf5zIel6FwejM+F35pK2lQGIyg==}
     dev: false
 
-  /@w5/redis@0.0.2:
-    resolution: {integrity: sha512-0sjge3R18172mzowLK3toNr1POGOqbcJRN99SNSI+FRPo/GfNfntTsu+UB0F6BN3btKCRctGXBpuM2G/bQgcqg==}
+  /@w5/redis@0.0.8:
+    resolution: {integrity: sha512-4omV9Lw9ak+5V8YoKShaWFoJmx/LBPeqozpX5IP6hZUraJN/LKgtLEJnJNNj8hiMxjCyqntelcwiZjtCsqdC9g==}
     dependencies:
-      ioredis: 5.3.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
-  /@w5/redis_lua@0.0.8:
-    resolution: {integrity: sha512-5LjjcF54ykb0oiAbQga9UDBwfnC5PLi5g1MG5rlVrMPQttwdp8APR+JCKIrOQP7HGbeJG59fm6GzPZqTmTaO1Q==}
-    dependencies:
-      '@w5/dot': 0.0.2
-      '@w5/u8': 0.0.1
-      '@w5/utf8': 0.0.3
+      '@w5/onexit': 0.0.4
+      '@w5/xedis': 0.0.20
     dev: false
 
   /@w5/req@0.0.1:
@@ -305,10 +289,6 @@ packages:
     resolution: {integrity: sha512-kJCKQ1zIx1M8NUqDRyLqD6W99ssShYv1twAyWNeZfcJ2/zxVpnRLX3GAtyU6rkmNUnj42aT9paAT4nKHY6hsdw==}
     dev: false
 
-  /@w5/utf8@0.0.3:
-    resolution: {integrity: sha512-FYkLRJ++nxAVLAzsD953X/Yc7ln7QQeUD2UsbbmtEUDYQYK2kvA7vqqKgwjuMQFUqwJdYdcHx7qtP7IgMUdHsw==}
-    dev: false
-
   /@w5/walk@0.0.1:
     resolution: {integrity: sha512-+52JzYkbfIujR0gVaOmpd0kytne07iC/HR0e5PuhrA8ugN5yldtI4IAjjpwVIyGsZeMo+pgV37SHUXazMDjDqA==}
 
@@ -318,6 +298,121 @@ packages:
 
   /@w5/write@0.0.1:
     resolution: {integrity: sha512-VyQXX2C3yRqfS7D5B+yCcsR1tvzZ1DzPLi5kugBOe/EeL+LOD3ftFamfik7wQr2TG7XQ7VF0snUpqVLaytwfOA==}
+
+  /@w5/xedis-android-arm-eabi@0.0.20:
+    resolution: {integrity: sha512-1aYxjCbwbXr0jVhLPFnnYUHXx6oxSocSHeHm1+o2gc0z0+Q1u3h1fxaZ3RzODs8J61LVau1yEOBhWZ7wZLkDRw==}
+    engines: {node: '>= 10'}
+    cpu: [arm]
+    os: [android]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@w5/xedis-android-arm64@0.0.20:
+    resolution: {integrity: sha512-HVaVac/EXgjugjD6Qnl68OPJke88PmKtjPCQFBy/4UR7+4SK5XJOGhOj7m+MJIVoyuro2kGHjR9ZVz39h+3TAQ==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@w5/xedis-darwin-arm64@0.0.20:
+    resolution: {integrity: sha512-UJXjt7i10X/1FxBbuV29+6Rm6pE3BkClmgvbnhhgV3shT6cXhmq4riAqpG6WgojA+/6LKYzK/NFYEcMjZ/zwgA==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@w5/xedis-darwin-universal@0.0.20:
+    resolution: {integrity: sha512-rqroytVi7W76kIIvDikrbyZjYbDG3rDCpbwlcNyECcGhK8gOfDTjXaHGMuiFvnXQRAPapJkgkpMZXVB1y6Sneg==}
+    engines: {node: '>= 10'}
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@w5/xedis-darwin-x64@0.0.20:
+    resolution: {integrity: sha512-nZDCQlRUgitl1PYN7m+w0PnmWXK87qtNbvBbEDt0ZLzcv42eNUxQGLRZouCJbE/XTcmmiwwUpmZglWAXTCNkqQ==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@w5/xedis-linux-arm-gnueabihf@0.0.20:
+    resolution: {integrity: sha512-FU/turwwa7v7Mc0m6JI4kxwokD5KLEIEGib4C9rP24v3KCy+0Mx1AQo5eIE/Kf6rJqRh4yxRCkEuAlVA2Icm4A==}
+    engines: {node: '>= 10'}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@w5/xedis-linux-arm64-gnu@0.0.20:
+    resolution: {integrity: sha512-5vokVxAE0Rif5/skjwzOXqntMj2koUUMy1dwkY1suOOAIeOiK/cqsbVeMSNLthAz5i2G4i/Y3EOadJq2nXSnfQ==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@w5/xedis-linux-arm64-musl@0.0.20:
+    resolution: {integrity: sha512-rZCgqTkcuNzvsSmzAajEP4d2X0PgnDAK0xico+wQrIPigcmUmPhPRSzOEdeXv+XDkjEpYUUfWIklwMlFqy8y/w==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@w5/xedis-linux-x64-gnu@0.0.20:
+    resolution: {integrity: sha512-5tk81eIpQOvKM/l8eheKdWxNQAN2bAp04c3Hi/cOCRKTJG0Mogyf8YJ0sPz7NJWdRTSGTqMm3AcoPdE9LR23/Q==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@w5/xedis-linux-x64-musl@0.0.20:
+    resolution: {integrity: sha512-SNNffq3USpxJuKNIExPVur4vr7dECadRf2fWcFaOEdaKqz+9eASKlpI7JtoqZWInjBKSxcktu3OuwSmD9tazWw==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@w5/xedis-win32-x64-msvc@0.0.20:
+    resolution: {integrity: sha512-UU1v1+3ZBGUAF8Pp2MET2K9Kwlcrad227u3PjsCsRFIbtAMj8fIR8XlqJE0p6O5u+DmU9j0ZEIBpC0/uAKU23A==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@w5/xedis@0.0.20:
+    resolution: {integrity: sha512-dsGex4gf8VnBn9x95hVF5O7x1Z1mMInUWe9NGEIivL+sqZgHJ5UbGM/8TBcFrWE/VorcZYks9OLJBbZARyUt2A==}
+    engines: {node: '>= 20'}
+    optionalDependencies:
+      '@w5/xedis-android-arm-eabi': 0.0.20
+      '@w5/xedis-android-arm64': 0.0.20
+      '@w5/xedis-darwin-arm64': 0.0.20
+      '@w5/xedis-darwin-universal': 0.0.20
+      '@w5/xedis-darwin-x64': 0.0.20
+      '@w5/xedis-linux-arm-gnueabihf': 0.0.20
+      '@w5/xedis-linux-arm64-gnu': 0.0.20
+      '@w5/xedis-linux-arm64-musl': 0.0.20
+      '@w5/xedis-linux-x64-gnu': 0.0.20
+      '@w5/xedis-linux-x64-musl': 0.0.20
+      '@w5/xedis-win32-x64-msvc': 0.0.20
+    dev: false
 
   /@w5/xxhash3-wasm@0.0.4:
     resolution: {integrity: sha512-krE6ziY9vviJ8rJlYRiODXGR+f4j+GfawVPjeHRY2kmNSTYd1+av8NDzElKbmtiaa5O2laBr6j1Hv0es8RuWlQ==}
@@ -429,11 +524,6 @@ packages:
       wrap-ansi: 7.0.0
     dev: true
 
-  /cluster-key-slot@1.1.2:
-    resolution: {integrity: sha512-RMr0FhtfXemyinomL4hrWcYJxmX6deFdCxpJzhDttxgO1+bcCnkk+9drydLVDmAMG7NE6aN/fl4F7ucU/90gAA==}
-    engines: {node: '>=0.10.0'}
-    dev: false
-
   /cmark-gfm@0.9.0:
     resolution: {integrity: sha512-zt++V303Zh+kqS3PERSq1knHT21TpKjbVUF/U63QhLktEH+eeZymv+mHz+6IhcTN5Hy85LdkgdKlroa/Jc6Wvg==}
     engines: {node: '>= 12'}
@@ -521,11 +611,6 @@ packages:
 
   /delegates@1.0.0:
     resolution: {integrity: sha512-bd2L678uiWATM6m5Z1VzNCErI3jiGzt6HGY8OVICs40JQq/HALfbyNJmp0UDakEY4pMMaN0Ly5om/B1VI/+xfQ==}
-    dev: false
-
-  /denque@2.1.0:
-    resolution: {integrity: sha512-HVQE3AAb/pxF8fQAoiqpvg9i3evqug3hoiwakOyZAwJm+6vZehbkYXZ0l4JxS+I3QxM97v5aaRNhj8v5oBhekw==}
-    engines: {node: '>=0.10'}
     dev: false
 
   /detect-libc@1.0.3:
@@ -771,23 +856,6 @@ packages:
     engines: {node: '>= 0.10'}
     dev: false
 
-  /ioredis@5.3.2:
-    resolution: {integrity: sha512-1DKMMzlIHM02eBBVOFQ1+AolGjs6+xEcM4PDL7NqOS6szq7H9jSaEkIUH6/a5Hl241LzW6JLSiAbNvTQjUupUA==}
-    engines: {node: '>=12.22.0'}
-    dependencies:
-      '@ioredis/commands': 1.2.0
-      cluster-key-slot: 1.1.2
-      debug: 4.3.4
-      denque: 2.1.0
-      lodash.defaults: 4.2.0
-      lodash.isarguments: 3.1.0
-      redis-errors: 1.2.0
-      redis-parser: 3.0.0
-      standard-as-callback: 2.1.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
   /is-core-module@2.11.0:
     resolution: {integrity: sha512-RRjxlvLDkD1YJwDbroBHMb+cukurkDWNyHx7D3oNB5x9rb5ogcksMC5wHCadcXoo67gVr/+3GFySh3134zi6rw==}
     dependencies:
@@ -900,14 +968,6 @@ packages:
   /lodash-es@4.17.21:
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
     dev: true
-
-  /lodash.defaults@4.2.0:
-    resolution: {integrity: sha512-qjxPLHd3r5DnsdGacqOMU6pb/avJzdh9tFX2ymgoZE27BmjXrNy/y4LoaiTeAb+O3gL8AfpJGtqfX/ae2leYYQ==}
-    dev: false
-
-  /lodash.isarguments@3.1.0:
-    resolution: {integrity: sha512-chi4NHZlZqZD18a0imDHnZPrDeBbTtVN7GXMwuGdRH9qotxAjYs3aVLKc7zNOG9eddR5Ksd8rvFEBc9SsggPpg==}
-    dev: false
 
   /lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
@@ -1156,18 +1216,6 @@ packages:
       resolve: 1.22.1
     dev: false
 
-  /redis-errors@1.2.0:
-    resolution: {integrity: sha512-1qny3OExCf0UvUV/5wpYKf2YwPcOqXzkwKKSmKHiE6ZMQs5heeE/c8eXK+PNllPvmjgAbfnsbpkGZWy8cBpn9w==}
-    engines: {node: '>=4'}
-    dev: false
-
-  /redis-parser@3.0.0:
-    resolution: {integrity: sha512-DJnGAeenTdpMEH6uAJRK/uiyEIH9WVsUmoLwzudwGJUwZPp80PDBWPHXSAGNPwNvIXAbe7MSUB1zQFugFml66A==}
-    engines: {node: '>=4'}
-    dependencies:
-      redis-errors: 1.2.0
-    dev: false
-
   /require-directory@2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
     engines: {node: '>=0.10.0'}
@@ -1256,10 +1304,6 @@ packages:
     resolution: {integrity: sha512-wD2AeVmxXRBoX44wAycgjVpMhvbwdI2aZjCkvfNcH1YqHQvJVa1duWc73OyVGJUc05fhFaTZeQ/PYsrmyH0JVA==}
     dependencies:
       through: 2.3.8
-    dev: false
-
-  /standard-as-callback@2.1.0:
-    resolution: {integrity: sha512-qoRRSyROncaz1z0mvYqIE4lCd9p2R90i6GxW3uZv5ucSu8tU7B5HXUP1gG8pVZsYNVaXjk8ClXHPttLyxAL48A==}
     dev: false
 
   /stream-combiner@0.0.4:
