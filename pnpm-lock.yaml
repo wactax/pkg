@@ -2,14 +2,14 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@w5/i18n':
-    specifier: ^0.0.87
-    version: 0.0.87
+    specifier: ^0.0.88
+    version: 0.0.88
   '@w5/read':
     specifier: ^0.0.1
     version: 0.0.1
   '@w5/redis':
-    specifier: ^0.0.16
-    version: 0.0.16
+    specifier: ^0.0.23
+    version: 0.0.23
   '@w5/uridir':
     specifier: ^0.0.1
     version: 0.0.1
@@ -20,8 +20,8 @@ dependencies:
     specifier: ^0.0.1
     version: 0.0.1
   '@w5/yml':
-    specifier: ^0.0.1
-    version: 0.0.1
+    specifier: ^0.0.2
+    version: 0.0.2
   json5:
     specifier: ^2.2.3
     version: 2.2.3
@@ -133,29 +133,29 @@ packages:
       turndown: 7.1.2
     dev: false
 
-  /@w5/i18n@0.0.87:
-    resolution: {integrity: sha512-2BR+ZKlDDYh0E52VHmxKhB8JrhCjnLUvINJmpjKtb5SWMm6MVCdkM9GBPsbjZuudRrJ6AHefaFuVJIAJ39ugvQ==}
+  /@w5/i18n@0.0.88:
+    resolution: {integrity: sha512-f9n9uYfxllDB/Mfpavz/vupVw1Nw71Em6RMxSVnTrItTMPqtgsnskRJrOjrmsWT34TSrNI30aR788IEbPtzYrw==}
     hasBin: true
     dependencies:
       '@w5/lang': 0.0.5
       '@w5/read': 0.0.1
-      '@w5/req': 0.0.3
+      '@w5/req': 0.0.9
       '@w5/sleep': 0.0.1
       '@w5/snake': 0.0.1
       '@w5/tran': 0.0.1
       '@w5/trmd': 0.0.17
       '@w5/u8': 0.0.1
-      '@w5/utf8': 0.0.1
+      '@w5/utf8': 0.0.3
       '@w5/walk': 0.0.1
       '@w5/wasm-set': 0.0.1
       '@w5/write': 0.0.1
       '@w5/xxhash3-wasm': 0.0.4
-      '@w5/yml': 0.0.1
+      '@w5/yml': 0.0.2
       chalk: 5.2.0
       cmark-gfm: 0.9.0
       get_default: 0.0.4
       html-entities: 2.3.3
-      http-proxy-agent: 5.0.0
+      http-proxy-agent: 7.0.0
       node-fetch: 3.3.1
       opencc-js: 1.0.5
       progress: 2.0.3
@@ -207,11 +207,11 @@ packages:
     resolution: {integrity: sha512-v/D6N/2OCOVHzaYHzoD/SmKn7yuvSZ/Kj7/HrPoWZOoPkXciZtzfsDXh+ShVvf5zIel6FwejM+F35pK2lQGIyg==}
     dev: false
 
-  /@w5/redis@0.0.16:
-    resolution: {integrity: sha512-eWU+vMEotTi4w9isomeKPluk0B7QuY45ciBii5jeG8TZIomulLsx/4twuYg3QDB3sR+tp3kr8bsicqaZD9pk9Q==}
+  /@w5/redis@0.0.23:
+    resolution: {integrity: sha512-ocKRnGG9B94cMOPZN98e6gX3PBvonZxuwuVpiyxWsqGoF7c3E1UxuspwdJI+8XU8D8Jo+vhRdDXKr5ZaVFTsGQ==}
     dependencies:
       '@w5/onexit': 0.0.8
-      '@w5/xedis': 0.0.21
+      '@w5/xedis': 0.0.34
     dev: false
 
   /@w5/req@0.0.1:
@@ -220,10 +220,14 @@ packages:
       '@w5/retry': 0.0.1
     dev: false
 
-  /@w5/req@0.0.3:
-    resolution: {integrity: sha512-tV6zb4YoXkfZ3ja48tuVOmCRqofu/bYDLbPdpI23SXB1xuJGQJ03U6I8/g42t6hChENGZViGBQu60ODnDZcMZw==}
+  /@w5/req@0.0.9:
+    resolution: {integrity: sha512-zrGZdAS2IJo4DBvWDKzaic+A92/polo0ybAjZMigI78tQ1WLoQ2k3rKCtWX/majuwtkEk+fDGexRiRIuYhsvBQ==}
     dependencies:
       '@w5/retry': 0.0.1
+      https-proxy-agent: 6.2.1
+      node-fetch: 3.3.1
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /@w5/retry@0.0.1:
@@ -289,6 +293,10 @@ packages:
     resolution: {integrity: sha512-kJCKQ1zIx1M8NUqDRyLqD6W99ssShYv1twAyWNeZfcJ2/zxVpnRLX3GAtyU6rkmNUnj42aT9paAT4nKHY6hsdw==}
     dev: false
 
+  /@w5/utf8@0.0.3:
+    resolution: {integrity: sha512-FYkLRJ++nxAVLAzsD953X/Yc7ln7QQeUD2UsbbmtEUDYQYK2kvA7vqqKgwjuMQFUqwJdYdcHx7qtP7IgMUdHsw==}
+    dev: false
+
   /@w5/walk@0.0.1:
     resolution: {integrity: sha512-+52JzYkbfIujR0gVaOmpd0kytne07iC/HR0e5PuhrA8ugN5yldtI4IAjjpwVIyGsZeMo+pgV37SHUXazMDjDqA==}
 
@@ -299,8 +307,8 @@ packages:
   /@w5/write@0.0.1:
     resolution: {integrity: sha512-VyQXX2C3yRqfS7D5B+yCcsR1tvzZ1DzPLi5kugBOe/EeL+LOD3ftFamfik7wQr2TG7XQ7VF0snUpqVLaytwfOA==}
 
-  /@w5/xedis-android-arm-eabi@0.0.21:
-    resolution: {integrity: sha512-246kziGo4+BbnHHurjzKPXJbZeQQV+eU/MPRu+5rWb9JFWOF9BsTE53tG8gd7Ke0TTREBJeb0NhjMcMJF0HuVQ==}
+  /@w5/xedis-android-arm-eabi@0.0.34:
+    resolution: {integrity: sha512-BxAe2fEBbTsLw9/cbM/1i7Oh2RpHskPYb2odO/p95f9NTyRRoORBItsjbiiYlbU5JWLNysN8GFZ5vUAzIWS84A==}
     engines: {node: '>= 10'}
     cpu: [arm]
     os: [android]
@@ -308,8 +316,8 @@ packages:
     dev: false
     optional: true
 
-  /@w5/xedis-android-arm64@0.0.21:
-    resolution: {integrity: sha512-f1m7bChn/tQuD4F/af6cUTQBDVjIHKO/11fe7Xs/IJS6Hs3JdXi2uBu3xiR3oRhAjKWz6noFWXeZwst7K2WVIA==}
+  /@w5/xedis-android-arm64@0.0.34:
+    resolution: {integrity: sha512-YOgK3lZw5x333Le3s/UuKW40VNFjQ1azvfHYmTL8gaY/b8CjVtWDLYIYuszvWCUxzrQRoxRhHPYGMElQq7gzgw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [android]
@@ -317,8 +325,8 @@ packages:
     dev: false
     optional: true
 
-  /@w5/xedis-darwin-arm64@0.0.21:
-    resolution: {integrity: sha512-SAAiHrOqHgs9aBGtemQKnkzE7jjLfUp5rtf/10z07ALGMad3r/tfgO9+pH8rbi7N30s++3+gOzJDiC/HCs5RwQ==}
+  /@w5/xedis-darwin-arm64@0.0.34:
+    resolution: {integrity: sha512-NQ9bYVOkqbOD2DJc+TX5ChJS8mAQkQ9I9v4f6TmfiuD+gdOKmqv5lF/V12CLlwZqP054zbf54xcDF8TDN1iE6A==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
@@ -326,16 +334,16 @@ packages:
     dev: false
     optional: true
 
-  /@w5/xedis-darwin-universal@0.0.21:
-    resolution: {integrity: sha512-dgOqL4kJufYnVqQEWosOuNU3b0J3ZWLo58aas6ysNBzpaXUJh+0kaOBVLsGcj2dQmmJA7q3Jcx51l7etwQIwNA==}
+  /@w5/xedis-darwin-universal@0.0.34:
+    resolution: {integrity: sha512-Y16Z5jza1WsCb8ZWUbxoekqDNwfxIo+dxx1GTz7bD1N/6ySo4uze0bDXPHgWzwnOKgTGTHHrEVGBqX6HpXtovA==}
     engines: {node: '>= 10'}
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@w5/xedis-darwin-x64@0.0.21:
-    resolution: {integrity: sha512-l8OVmTK2uPvU9xMfNcJ0Uc+fbgmJ2A8WSwpjzJoZhTonC2JTbNR78rxfIbsEticgKNXv54USWneGqgGZgWO5FA==}
+  /@w5/xedis-darwin-x64@0.0.34:
+    resolution: {integrity: sha512-dFrteQhQGs0EdEJ4GADZe27lOe9Qt6DiwxqxFV7QIDG5XQLYRJWu+hslXGR+Fe94BWejVYw/TNGf1U4aW3hqYw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
@@ -343,8 +351,8 @@ packages:
     dev: false
     optional: true
 
-  /@w5/xedis-linux-arm-gnueabihf@0.0.21:
-    resolution: {integrity: sha512-jMpkrO7PWcosHlwm28bq3gSk2sphzagsAWpAuYw7urF9XMja0K07Ywg0Okj0QdlE04fWvGmOETPWekMnI3k4ZQ==}
+  /@w5/xedis-linux-arm-gnueabihf@0.0.34:
+    resolution: {integrity: sha512-EC0yCNUo6RWPa6Mimp2kVY/Tz+bKdv3PBjsL++WyGtgNBQWqFTIaB77XSRMeJAzmEQvdk9qer4R4ra23vfBnzw==}
     engines: {node: '>= 10'}
     cpu: [arm]
     os: [linux]
@@ -352,8 +360,8 @@ packages:
     dev: false
     optional: true
 
-  /@w5/xedis-linux-arm64-gnu@0.0.21:
-    resolution: {integrity: sha512-q5yuU7DniJeVsw64cffqpKJbntgtt0anw4j893SwPYz7D9SXANQTRqk1jbq32fClAj5GBsLyOHhGU8GxbkG06g==}
+  /@w5/xedis-linux-arm64-gnu@0.0.34:
+    resolution: {integrity: sha512-5nknf+45TMdGFMQKqXL4ZM33cD9D7MC+6p6HxaaHBjnZAwc41caceA+Rj3eyMjzUwYH7mfwQlyegjamaRdU+yA==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -361,8 +369,8 @@ packages:
     dev: false
     optional: true
 
-  /@w5/xedis-linux-arm64-musl@0.0.21:
-    resolution: {integrity: sha512-YPbqb5I3aRMj+Nhjo0rG6UMKy5zlcgzLG1CN4yzhbrWI4yVCotC0t7PF+cluU6/IckEPQyQqvRyDDlxPipypVg==}
+  /@w5/xedis-linux-arm64-musl@0.0.34:
+    resolution: {integrity: sha512-Uw8lDZIEu7aC9jiBsPn8NKdu2NtiOKMH2OOSPApt5xLE8w0V7dkIY/7TtG/tlVw6tBEL7ECw+c3OlZeV0/kxDg==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -370,8 +378,8 @@ packages:
     dev: false
     optional: true
 
-  /@w5/xedis-linux-x64-gnu@0.0.21:
-    resolution: {integrity: sha512-PsO/KEjmq9jlM4uvel7o/sBEQtyNvIkv0Hj6s1bJONAj3xOlRIr0x7eiDs0JVU7M13NTHczYXCGrFNSZfRiM+A==}
+  /@w5/xedis-linux-x64-gnu@0.0.34:
+    resolution: {integrity: sha512-0ZxTsYvfSf7JKt1ju6kzFWyjkxbMqMtz6xGXWsreAiH2HjOIcrByhuvXuHJXc6ignERJyEJwXQdHM4xoli65rg==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -379,8 +387,8 @@ packages:
     dev: false
     optional: true
 
-  /@w5/xedis-linux-x64-musl@0.0.21:
-    resolution: {integrity: sha512-p9Ufh4x6MO37ynvYQcvGYZ8IOyieTd6+oxrD8tFvb+fjEq4g+vnxyykeerf9Ul7+MkVxGpjkGw9QHQAOKjVUgg==}
+  /@w5/xedis-linux-x64-musl@0.0.34:
+    resolution: {integrity: sha512-mM38eeXEYV5CAPlqwJzBrrQlXJWd56YMN0SHEvmrzhUnafxlKIYeReaGQ5H6HRyWTrpN5Yz0eyypjaVRk/4jAQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -388,8 +396,8 @@ packages:
     dev: false
     optional: true
 
-  /@w5/xedis-win32-x64-msvc@0.0.21:
-    resolution: {integrity: sha512-Wt4bjNeExzsSsoa5WsNs8fAaieVlbpNdd+7Km1B5uzPfAn6tjKDITpccWecRykJBQmFJb5hz+8PZ+clhFM+n7g==}
+  /@w5/xedis-win32-x64-msvc@0.0.34:
+    resolution: {integrity: sha512-G2CRITrLQdXVKyJm0NsYzSQHWthiSKSYrdKRgZavUR8ia5FUDG8oVOB7h9GsQHQDDWh2jP3HVKFRR9Tc9bZIaw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
@@ -397,29 +405,29 @@ packages:
     dev: false
     optional: true
 
-  /@w5/xedis@0.0.21:
-    resolution: {integrity: sha512-f3Hj0sWx/W0lvS0UsfZcvpwVB2bbLIEmPtcGTbJVIan2DL4J3RAJHLECzFrq7VuH+dKXpG7g2Ld8tEudB/LWAQ==}
+  /@w5/xedis@0.0.34:
+    resolution: {integrity: sha512-t6iyiW3yoW31G/VQ1bcYv6/PLK5KtSV4GotknYLH9g37obhEb98C/MWnL36ZIMR7UUL15oWoGgMLpskdD8Zn4Q==}
     engines: {node: '>= 20'}
     optionalDependencies:
-      '@w5/xedis-android-arm-eabi': 0.0.21
-      '@w5/xedis-android-arm64': 0.0.21
-      '@w5/xedis-darwin-arm64': 0.0.21
-      '@w5/xedis-darwin-universal': 0.0.21
-      '@w5/xedis-darwin-x64': 0.0.21
-      '@w5/xedis-linux-arm-gnueabihf': 0.0.21
-      '@w5/xedis-linux-arm64-gnu': 0.0.21
-      '@w5/xedis-linux-arm64-musl': 0.0.21
-      '@w5/xedis-linux-x64-gnu': 0.0.21
-      '@w5/xedis-linux-x64-musl': 0.0.21
-      '@w5/xedis-win32-x64-msvc': 0.0.21
+      '@w5/xedis-android-arm-eabi': 0.0.34
+      '@w5/xedis-android-arm64': 0.0.34
+      '@w5/xedis-darwin-arm64': 0.0.34
+      '@w5/xedis-darwin-universal': 0.0.34
+      '@w5/xedis-darwin-x64': 0.0.34
+      '@w5/xedis-linux-arm-gnueabihf': 0.0.34
+      '@w5/xedis-linux-arm64-gnu': 0.0.34
+      '@w5/xedis-linux-arm64-musl': 0.0.34
+      '@w5/xedis-linux-x64-gnu': 0.0.34
+      '@w5/xedis-linux-x64-musl': 0.0.34
+      '@w5/xedis-win32-x64-msvc': 0.0.34
     dev: false
 
   /@w5/xxhash3-wasm@0.0.4:
     resolution: {integrity: sha512-krE6ziY9vviJ8rJlYRiODXGR+f4j+GfawVPjeHRY2kmNSTYd1+av8NDzElKbmtiaa5O2laBr6j1Hv0es8RuWlQ==}
     dev: false
 
-  /@w5/yml@0.0.1:
-    resolution: {integrity: sha512-ePfJiLsEkP3QZoGACXXQREcHwXBKxzuW5AbLWA8nufC+dtjbE6g/EmLCriz1UrcORLTlp8v0WIa8zj1a6cGnpQ==}
+  /@w5/yml@0.0.2:
+    resolution: {integrity: sha512-dNaHMzGCqkiIy+gxWu5HiABVJNwoNW4jwExbVMh5ES+iruiSHPcs2a2dzgDWMPQJCvUTwNd5VBrMSk8eU2uaXw==}
     dependencies:
       '@w5/read': 0.0.1
       '@w5/write': 0.0.1
@@ -429,6 +437,15 @@ packages:
   /agent-base@6.0.2:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
     engines: {node: '>= 6.0.0'}
+    dependencies:
+      debug: 4.3.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /agent-base@7.1.0:
+    resolution: {integrity: sha512-o/zjMZRhJxny7OyEF+Op8X+efiELC7k7yOjMzgfzVqOzXqkBkWI79YoTdOtsuWd5BWhAGAuOY/Xa6xpiaWXiNg==}
+    engines: {node: '>= 14'}
     dependencies:
       debug: 4.3.4
     transitivePeerDependencies:
@@ -829,6 +846,26 @@ packages:
     dependencies:
       '@tootallnate/once': 2.0.0
       agent-base: 6.0.2
+      debug: 4.3.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /http-proxy-agent@7.0.0:
+    resolution: {integrity: sha512-+ZT+iBxVUQ1asugqnD6oWoRiS25AkjNfG085dKJGtGxkdwLQrMKU5wJr2bOOFAXzKcTuqq+7fZlTMgG3SRfIYQ==}
+    engines: {node: '>= 14'}
+    dependencies:
+      agent-base: 7.1.0
+      debug: 4.3.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /https-proxy-agent@6.2.1:
+    resolution: {integrity: sha512-ONsE3+yfZF2caH5+bJlcddtWqNI3Gvs5A38+ngvljxaBiRXRswym2c7yf8UAeFpRFKjFNHIFEHqR/OLAWJzyiA==}
+    engines: {node: '>= 14'}
+    dependencies:
+      agent-base: 7.1.0
       debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
