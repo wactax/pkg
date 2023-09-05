@@ -16,14 +16,14 @@ SYMLINK = [
 
 symlink = (dir)=>
   for i from SYMLINK
-    dest = join '../../pkg',dir,i
-    if existsSync dest
-      to = join(ROOT, i, 'src', dir)
+    to_dir = join ROOT, i
+    if existsSync to_dir
+      to = join(to_dir, 'src', dir)
       rmSync to, recursive:true, force:true
       if existsSync join PWD, dir, i
         console.log to
         symlinkSync(
-          dest
+          join '../../pkg',dir,i
           to
         )
   return
