@@ -5,5 +5,4 @@
 !pnpm-lock.yaml
 !*.coffee
 !*.yml
-pkg.yml
 .DS_Store
