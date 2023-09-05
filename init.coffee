@@ -19,11 +19,13 @@ symlink = (dir)=>
     to = join(ROOT, i, 'src', dir)
     rmSync to, recursive:true, force:true
     if existsSync join PWD, dir, i
-      console.log to
-      symlinkSync(
-        join '../../pkg',dir,i
-        to
-      )
+      dest = join '../../pkg',dir,i
+      if existsSync dest
+        console.log to
+        symlinkSync(
+          dest
+          to
+        )
   return
 
 cdRun = new Proxy(
